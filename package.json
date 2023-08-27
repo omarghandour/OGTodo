@@ -5,7 +5,9 @@
   "scripts": {
     "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
     "server": "cd server && npm start",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "start": "if-env TYPE=server && (cd server && npm run start) || (cd client && npm run start)"
+
   },
   "keywords": [],
   "dependencies": {
